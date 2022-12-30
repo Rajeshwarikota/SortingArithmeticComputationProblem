@@ -1,6 +1,4 @@
-declare -A Results
-Results[a+b*c]="26"
-Results[a*b+c]="12"
-Results[c+a/b]="6"
-Results[a%b+c]="6"
-echo "All Computation Results " ${Results[@]}
+for i in $( echo "26 12  6 6 " | tr ' ' '\n' | sort -nr )
+do
+echo $i
+done
